@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+        content="width=device-width,initial-scale=1" />
+  <meta name="description"
+        content="Спасение урожая — учебная мини-игра об управлении современной умной фермой." />
+  <meta name="theme-color"
+        content="#f8f1e7" />
+  <title>Спасение урожая | Умная ферма</title>
+  <link rel="icon"
+        href="assets/favicon.svg"
+        type="image/svg+xml" />
+  <script src="theme.js">
+  </script>
+  <link rel="stylesheet"
+        href="style.css" />
+  <script src="site.js"
+          defer>
+  </script>
+</head>
+
+<body>
+  <a class="skip"
+     href="#main">К содержанию</a>
+  <header class="site-header container">
+    <a class="brand"
+       href="index.html">
+      <span class="brand-mark">
+        <svg viewBox="0 0 28 28"
+             fill="none"
+             aria-hidden="true">
+          <path d="M14 24V11M14 17C5 17 4 9 4 6c7 0 11 4 10 11ZM14 13c0-8 6-10 10-10 0 7-3 11-10 10Z"
+                stroke="currentColor"
+                stroke-width="1.8" />
+        </svg>
+      </span>
+      <span>Спасение урожая</span>
+    </a>
+    <nav class="nav"
+         id="navigation"
+         aria-label="Основная навигация">
+      <a href="index.html"
+         aria-current="page">Главная</a>
+      <a href="project.html">О проекте</a>
+      <a href="game.html">Мини-игра</a>
+      <a href="author.html">Автор</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle"
+              data-theme-toggle
+              aria-label="Переключить тему">
+        <svg class="moon"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor">
+          <path d="M20 15A8.5 8.5 0 0 1 9 4a8.5 8.5 0 1 0 11 11Z" />
+        </svg>
+        <svg class="sun"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor">
+          <circle cx="12"
+                  cy="12"
+                  r="4" />
+          <path d="M12 1v3m0 16v3M1 12h3m16 0h3" />
+        </svg>
+      </button>
+      <button class="menu-toggle"
+              data-menu
+              aria-label="Меню"
+              aria-controls="navigation"
+              aria-expanded="false">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <main id="main"
+        class="container">
+    <section class="hero-rescue">
+      <div class="hero-copy">
+        <p class="eyebrow">Учебная мини-игра / 7 дней</p>
+        <h1 class="display">
+          Сохрани
+          <br />
+          <em>урожай.</em>
+        </h1>
+        <p class="lead">
+          Каждый день ферма сообщает о новой проблеме. Оцените ситуацию, выберите
+          решение и сохраните растения, воду и энергию.
+        </p>
+        <div class="hero-actions">
+          <a class="btn"
+             href="game.html">Принять вызов →</a>
+          <a class="btn secondary"
+             href="project.html">Как устроена игра</a>
+        </div>
+      </div>
+      <figure class="greenhouse-card">
+        <img src="assets/smart-greenhouse.png"
+             width="1536"
+             height="1024"
+             alt="Современная умная теплица с резервуаром, солнечными панелями, датчиками и системой полива."
+             fetchpriority="high" />
+        <figcaption class="image-label">Система готова к наблюдению</figcaption>
+      </figure>
+    </section>
+
+    <section class="mission-strip"
+             aria-label="Особенности мини-игры">
+      <article>
+        <strong>13 ситуаций</strong>
+        <span>7 случайных испытаний за одно прохождение</span>
+      </article>
+      <article>
+        <strong>4 показателя</strong>
+        <span>Урожай, здоровье, вода и энергия</span>
+      </article>
+      <article>
+        <strong>5 званий</strong>
+        <span>Итог зависит от ваших решений</span>
+      </article>
+    </section>
+
+    <section class="home-story">
+      <div>
+        <p class="eyebrow">Ваша задача</p>
+        <h2>
+          Не угадать.
+          <br />
+          Разобраться.
+        </h2>
+      </div>
+      <div>
+        <p>
+          «Спасение урожая» показывает умную ферму не как один алгоритм полива, а как
+          систему, где связаны датчики, вентиляция, насос, растения и ресурсы.
+        </p>
+        <p>
+          После каждого выбора игра объясняет последствия. Ошибка не завершает
+          прохождение: она уменьшает показатели и помогает понять, какое решение было бы
+          рациональнее.
+        </p>
+        <div class="day-flow"
+             aria-label="Ход игрового дня">
+          <span>
+            <b>01</b>
+            Получить сигнал
+          </span>
+          <span>
+            <b>02</b>
+            Оценить риск
+          </span>
+          <span>
+            <b>03</b>
+            Выбрать действие
+          </span>
+          <span>
+            <b>04</b>
+            Увидеть результат
+          </span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <span>Микаелян Алина Эдвардовна · ПОНОИнф-231</span>
+    <a href="project.html">Описание проекта</a>
+    <span>Учебный проект · 2026</span>
+  </footer>
+</body>
+
+</html>

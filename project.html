@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+        content="width=device-width,initial-scale=1" />
+  <meta name="description"
+        content="Описание учебного проекта и механики мини-игры Спасение урожая." />
+  <meta name="theme-color"
+        content="#f8f1e7" />
+  <title>О проекте | Спасение урожая</title>
+  <link rel="icon"
+        href="assets/favicon.svg"
+        type="image/svg+xml" />
+  <script src="theme.js">
+  </script>
+  <link rel="stylesheet"
+        href="style.css" />
+  <script src="site.js"
+          defer>
+  </script>
+</head>
+
+<body>
+  <a class="skip"
+     href="#main">К содержанию</a>
+  <header class="site-header container">
+    <a class="brand"
+       href="index.html">
+      <span class="brand-mark">
+        <svg viewBox="0 0 28 28"
+             fill="none">
+          <path d="M14 24V11M14 17C5 17 4 9 4 6c7 0 11 4 10 11ZM14 13c0-8 6-10 10-10 0 7-3 11-10 10Z"
+                stroke="currentColor"
+                stroke-width="1.8" />
+        </svg>
+      </span>
+      <span>Спасение урожая</span>
+    </a>
+    <nav class="nav"
+         id="navigation"
+         aria-label="Основная навигация">
+      <a href="index.html">Главная</a>
+      <a href="project.html"
+         aria-current="page">О проекте</a>
+      <a href="game.html">Мини-игра</a>
+      <a href="author.html">Автор</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle"
+              data-theme-toggle
+              aria-label="Переключить тему">
+        <svg class="moon"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor">
+          <path d="M20 15A8.5 8.5 0 0 1 9 4a8.5 8.5 0 1 0 11 11Z" />
+        </svg>
+        <svg class="sun"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor">
+          <circle cx="12"
+                  cy="12"
+                  r="4" />
+          <path d="M12 1v3m0 16v3M1 12h3m16 0h3" />
+        </svg>
+      </button>
+      <button class="menu-toggle"
+              data-menu
+              aria-label="Меню"
+              aria-controls="navigation"
+              aria-expanded="false">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <main id="main"
+        class="container">
+    <header class="page-hero">
+      <div>
+        <p class="eyebrow">Описание проекта</p>
+        <h1 class="display">
+          Решения
+          <br />
+          <em>влияют.</em>
+        </h1>
+      </div>
+      <p class="lead">
+        Семидневная учебная модель показывает, как управляющий умной фермы реагирует на
+        события и сохраняет баланс ресурсов.
+      </p>
+    </header>
+
+    <section class="chapter">
+      <div class="chapter-label">
+        <b>01</b>
+        Проблема
+      </div>
+      <div class="chapter-body">
+        <h2>Одного датчика недостаточно.</h2>
+        <p>
+          На современной ферме урожай зависит от нескольких взаимосвязанных систем. Жара
+          требует вентиляции и воды, ливень — отключения полива и отвода влаги, а
+          неисправный датчик нельзя считать достоверным источником данных.
+        </p>
+        <p>
+          Текстовое описание этих связей трудно запомнить. Мини-игра превращает их в
+          короткие ситуации, где пользователь принимает решение и сразу видит
+          последствия.
+        </p>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="chapter-label">
+        <b>02</b>
+        Цель и задачи
+      </div>
+      <div class="chapter-body">
+        <h2>Научиться выбирать действие по данным.</h2>
+        <p>
+          Цель проекта — показать принципы управления умной фермой через простую
+          ситуационную игру.
+        </p>
+        <ul>
+          <li>Представить ферму как систему связанных устройств и ресурсов.</li>
+          <li>Создать набор из тринадцати понятных проблемных ситуаций.</li>
+          <li>Случайно выбирать семь событий для каждого нового прохождения.</li>
+          <li>Показать влияние решений на урожай, здоровье, воду и энергию.</li>
+          <li>Объяснять правильный подход после каждого ответа.</li>
+          <li>Подвести итог прохождения с помощью показателей и звания.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="chapter"
+             id="model">
+      <div class="chapter-label">
+        <b>03</b>
+        Механика
+      </div>
+      <div class="chapter-body">
+        <h2>Тринадцать событий — семь случайных решений.</h2>
+        <div class="research-grid">
+          <article class="brief-card">
+            <span>Ситуация</span>
+            <h3>Аномальная жара</h3>
+            <p>Настроить затенение и вентиляцию, не расходуя воду без необходимости.</p>
+          </article>
+          <article class="brief-card">
+            <span>Ситуация</span>
+            <h3>Ошибка датчика</h3>
+            <p>Проверить данные резервным способом перед запуском оборудования.</p>
+          </article>
+          <article class="brief-card">
+            <span>Ситуация</span>
+            <h3>Вредители</h3>
+            <p>Выбрать безопасную локальную обработку растений.</p>
+          </article>
+          <article class="brief-card">
+            <span>Ситуация</span>
+            <h3>Сильный ливень</h3>
+            <p>Отключить полив и открыть дренажные каналы.</p>
+          </article>
+          <article class="brief-card">
+            <span>Ситуация</span>
+            <h3>Поломка насоса</h3>
+            <p>Подключить резервный контур, сохранив водоснабжение.</p>
+          </article>
+          <article class="brief-card">
+            <span>Ситуация</span>
+            <h3>Холодная ночь</h3>
+            <p>Закрыть вентиляцию и уменьшить подачу воды.</p>
+          </article>
+          <article class="brief-card">
+            <span>Ситуация</span>
+            <h3>Сухой ветер</h3>
+            <p>Перенести капельный полив на раннее утро.</p>
+          </article>
+          <article class="brief-card">
+            <span>Ситуация</span>
+            <h3>Перегрузка сети</h3>
+            <p>Оставить питание важных систем и подключить солнечный резерв.</p>
+          </article>
+          <article class="brief-card">
+            <span>Ситуация</span>
+            <h3>Утечка воды</h3>
+            <p>Изолировать повреждённую линию и сохранить воду в резервуаре.</p>
+          </article>
+          <article class="brief-card">
+            <span>Ситуация</span>
+            <h3>Предупреждение о граде</h3>
+            <p>Закрыть защитные экраны до начала осадков.</p>
+          </article>
+          <article class="brief-card">
+            <span>Ситуация</span>
+            <h3>Нехватка питания</h3>
+            <p>Проверить раствор и точно скорректировать его состав.</p>
+          </article>
+          <article class="brief-card">
+            <span>Ситуация</span>
+            <h3>Высокая влажность</h3>
+            <p>Коротко проветрить теплицу и снизить риск грибка.</p>
+          </article>
+          <article class="brief-card">
+            <span>Ситуация</span>
+            <h3>Проблема опыления</h3>
+            <p>Запустить безопасный цикл искусственного опыления.</p>
+          </article>
+        </div>
+        <p>
+          У каждого ответа есть последствия. Игра не прерывается после ошибки:
+          показатели меняются, а пользователь получает короткое объяснение.
+        </p>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="chapter-label">
+        <b>04</b>
+        Показатели
+      </div>
+      <div class="chapter-body">
+        <h2>Что изменяется во время игры.</h2>
+        <div class="research-grid">
+          <article class="brief-card">
+            <span>01</span>
+            <h3>Урожай</h3>
+            <p>
+              Главный итог. Снижается, если проблемы долго остаются без правильного
+              решения.
+            </p>
+          </article>
+          <article class="brief-card">
+            <span>02</span>
+            <h3>Здоровье</h3>
+            <p>Показывает состояние растений после жары, холода, влаги и вредителей.</p>
+          </article>
+          <article class="brief-card">
+            <span>03</span>
+            <h3>Вода</h3>
+            <p>Ограниченный запас. Необдуманные действия приводят к лишнему расходу.</p>
+          </article>
+          <article class="brief-card">
+            <span>04</span>
+            <h3>Энергия</h3>
+            <p>Используется насосом, вентиляцией, освещением и резервными системами.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="chapter-label">
+        <b>05</b>
+        Итоговые звания
+      </div>
+      <div class="chapter-body">
+        <h2>Результат объясняется одним образом.</h2>
+        <p>
+          Звание зависит от сохранённого урожая и количества рациональных решений. Оно
+          не заменяет показатели, а помогает быстро понять итог прохождения.
+        </p>
+        <div class="rank-table">
+          <div class="rank-row">
+            <strong>Мастер умной фермы</strong>
+            <span>Отличный урожай и не менее шести правильных решений.</span>
+          </div>
+          <div class="rank-row">
+            <strong>Опытный агроном</strong>
+            <span>Большая часть урожая сохранена, допущены небольшие ошибки.</span>
+          </div>
+          <div class="rank-row">
+            <strong>Помощник фермера</strong>
+            <span>
+              Урожай сохранён частично, ресурсы расходовались не всегда рационально.
+            </span>
+          </div>
+          <div class="rank-row">
+            <strong>Начинающий управляющий</strong>
+            <span>Несколько решений ухудшили состояние растений.</span>
+          </div>
+          <div class="rank-row">
+            <strong>Нужен новый план</strong>
+            <span>Урожай серьёзно пострадал — стоит пройти сценарий ещё раз.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="chapter-label">
+        <b>06</b>
+        Практическая ценность
+      </div>
+      <div class="chapter-body">
+        <h2>Короткий опыт с понятной обратной связью.</h2>
+        <p>
+          Мини-игру можно использовать на защите проекта или для самостоятельного
+          знакомства с автоматизацией сельского хозяйства. Прохождение занимает
+          несколько минут, не требует регистрации и работает на компьютере и телефоне.
+        </p>
+        <p>
+          Модель учебная. Числовые значения и последствия действий упрощены и не
+          являются рекомендациями по эксплуатации реальной теплицы.
+        </p>
+        <a class="btn"
+           href="game.html">Начать мини-игру →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <span>Микаелян Алина Эдвардовна · ПОНОИнф-231</span>
+    <a href="game.html">Мини-игра</a>
+    <span>Учебный проект · 2026</span>
+  </footer>
+</body>
+
+</html>

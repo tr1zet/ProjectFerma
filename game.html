@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+        content="width=device-width,initial-scale=1" />
+  <meta name="description"
+        content="Мини-игра Спасение урожая: пройдите семь случайных ситуаций на умной ферме." />
+  <meta name="theme-color"
+        content="#f8f1e7" />
+  <title>Мини-игра | Спасение урожая</title>
+  <link rel="icon"
+        href="assets/favicon.svg"
+        type="image/svg+xml" />
+  <script src="theme.js">
+  </script>
+  <link rel="stylesheet"
+        href="style.css" />
+  <script src="site.js"
+          defer>
+  </script>
+  <script src="rescue-game.js"
+          defer>
+  </script>
+</head>
+
+<body>
+  <a class="skip"
+     href="#main">К содержанию</a>
+  <header class="site-header container">
+    <a class="brand"
+       href="index.html">
+      <span class="brand-mark">
+        <svg viewBox="0 0 28 28"
+             fill="none">
+          <path d="M14 24V11M14 17C5 17 4 9 4 6c7 0 11 4 10 11ZM14 13c0-8 6-10 10-10 0 7-3 11-10 10Z"
+                stroke="currentColor"
+                stroke-width="1.8" />
+        </svg>
+      </span>
+      <span>Спасение урожая</span>
+    </a>
+    <nav class="nav"
+         id="navigation"
+         aria-label="Основная навигация">
+      <a href="index.html">Главная</a>
+      <a href="project.html">О проекте</a>
+      <a href="game.html"
+         aria-current="page">Мини-игра</a>
+      <a href="author.html">Автор</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle"
+              data-theme-toggle
+              aria-label="Переключить тему">
+        <svg class="moon"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor">
+          <path d="M20 15A8.5 8.5 0 0 1 9 4a8.5 8.5 0 1 0 11 11Z" />
+        </svg>
+        <svg class="sun"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor">
+          <circle cx="12"
+                  cy="12"
+                  r="4" />
+          <path d="M12 1v3m0 16v3M1 12h3m16 0h3" />
+        </svg>
+      </button>
+      <button class="menu-toggle"
+              data-menu
+              aria-label="Меню"
+              aria-controls="navigation"
+              aria-expanded="false">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <main id="main"
+        class="container">
+    <header class="game-intro">
+      <div>
+        <p class="eyebrow">Сценарий / 7 дней</p>
+        <h1>Спасите урожай.</h1>
+      </div>
+      <p>
+        В каждом прохождении система случайно выбирает 7 из 13 ситуаций.
+        Решайте проблемы и следите за показателями фермы.
+      </p>
+    </header>
+
+    <section class="rescue-dashboard"
+             id="rescue-game"
+             aria-label="Игровая панель">
+      <div class="scene-panel">
+        <div class="scene-image">
+          <img src="assets/smart-greenhouse.png"
+               width="1536"
+               height="1024"
+               alt="Современная теплица с датчиками, водой, солнечными панелями и вентиляцией." />
+          <span class="alert-marker"
+                id="alert-marker"
+                aria-hidden="true">!</span>
+        </div>
+        <div class="scene-caption">
+          <span>Зона события: <strong id="event-zone">Теплица</strong>
+          </span>
+          <span id="system-status">Система ожидает решения</span>
+        </div>
+        <div class="hud"
+             aria-label="Показатели фермы">
+          <div class="metric harvest">
+            <span>Урожай</span>
+            <strong id="harvest-value">100%</strong>
+            <div class="meter-track">
+              <i id="harvest-bar">
+              </i>
+            </div>
+          </div>
+          <div class="metric health">
+            <span>Здоровье</span>
+            <strong id="health-value">100%</strong>
+            <div class="meter-track">
+              <i id="health-bar">
+              </i>
+            </div>
+          </div>
+          <div class="metric water">
+            <span>Вода</span>
+            <strong id="water-value">100 л</strong>
+            <div class="meter-track">
+              <i id="water-bar">
+              </i>
+            </div>
+          </div>
+          <div class="metric energy">
+            <span>Энергия</span>
+            <strong id="energy-value">100%</strong>
+            <div class="meter-track">
+              <i id="energy-bar">
+              </i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="mission-panel"
+             aria-labelledby="event-title">
+        <div class="day-progress">
+          <span id="day-label">День 1 из 7</span>
+          <div class="day-dots"
+               id="day-dots"
+               aria-label="Прогресс игры">
+          </div>
+        </div>
+        <div class="event-icon"
+             id="event-icon"
+             aria-hidden="true">☀</div>
+        <p class="eyebrow"
+           id="event-type">Климатическая ситуация</p>
+        <h2 id="event-title">Аномальная жара</h2>
+        <p class="event-description"
+           id="event-description">
+        </p>
+        <div class="choices"
+             id="choices"
+             aria-label="Варианты решения">
+        </div>
+        <div class="feedback"
+             id="feedback"
+             hidden
+             role="status"
+             aria-live="polite">
+          <strong id="feedback-title">
+          </strong>
+          <p id="feedback-text">
+          </p>
+        </div>
+        <div class="mission-actions">
+          <button class="btn"
+                  id="next-event"
+                  hidden>Следующий день →</button>
+          <button class="btn secondary"
+                  id="restart-game">
+            Начать заново
+          </button>
+        </div>
+      </aside>
+
+      <section class="history-panel"
+               aria-labelledby="history-title">
+        <p class="eyebrow">Хронология</p>
+        <h2 id="history-title">Журнал решений</h2>
+        <div class="event-log"
+             id="event-log">
+        </div>
+      </section>
+    </section>
+
+    <section class="results"
+             id="results"
+             hidden
+             aria-labelledby="rank-title">
+      <p class="eyebrow">Сценарий завершён</p>
+      <h2 id="rank-title">
+      </h2>
+      <p id="rank-description">
+      </p>
+      <div class="result-grid">
+        <div>
+          <strong id="final-harvest">
+          </strong>
+          <span>урожай</span>
+        </div>
+        <div>
+          <strong id="final-health">
+          </strong>
+          <span>здоровье</span>
+        </div>
+        <div>
+          <strong id="final-resources">
+          </strong>
+          <span>ресурсы</span>
+        </div>
+        <div>
+          <strong id="final-correct">
+          </strong>
+          <span>верные решения</span>
+        </div>
+      </div>
+      <button class="btn"
+              id="play-again">Пройти ещё раз →</button>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <span>Микаелян Алина Эдвардовна · ПОНОИнф-231</span>
+    <a href="project.html#model">Правила игры</a>
+    <span>Учебный проект · 2026</span>
+  </footer>
+</body>
+
+</html>
